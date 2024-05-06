@@ -1,8 +1,12 @@
 import React from "react";
 import { useEffect, useRef } from "react";
 import "../App.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+
 export default function HeaderComponent() {
+
+  const location = useLocation();
   const linkedinButtonRef = useRef(null);
   const gitButtonRef = useRef(null);
 
@@ -35,24 +39,28 @@ export default function HeaderComponent() {
     }
   }, []);
   return (
-    <div id="Header">
-      <div id="Home">
-        <NavLink
-          style={{ textDecoration: "none" }}
-          exact
-          to="/"
-          activeClassName="active"
-        >
-          <h2>
-            <span style={{ textDecoration: "none" }} class="headCont">
-              &lt;/
-            </span>
-            HARSH
-            <span style={{ textDecoration: "none" }} class="headCont">
-              &gt;
-            </span>
-          </h2>
-        </NavLink>
+    <div id="Header" class="w-full">
+      <div id="Home" class="w-full">
+        <AnimatePresence mode="wait">
+          <NavLink
+          location = {location}
+          key={location.pathname}
+            style={{ textDecoration: "none" }}
+            exact
+            to="/"
+            activeClassName="active"
+          >
+            <h2>
+              <span style={{ textDecoration: "none" }} class="headCont">
+                &lt;/
+              </span>
+              HARSH
+              <span style={{ textDecoration: "none" }} class="headCont">
+                &gt;
+              </span>
+            </h2>
+          </NavLink>
+        </AnimatePresence>  
       </div>
       <div class="headerContent">
         <NavLink id="nav" exact to="/About" activeClassName="active">

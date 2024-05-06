@@ -7,15 +7,18 @@
   font-size: larger;
   font-weight: 600;
   align-items: center;
+  width: auto;
 }
 
 .headCont:hover {
   text-decoration: underline;
 }
+
 #Home {
   margin-left: 28px;
   width: 23em;
 }
+
 #Home:hover {
   text-decoration: underline;
   color: blueviolet;
@@ -40,7 +43,7 @@
 
 #btnHeader {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  border-radius: 40px;
+  border-radius: 10px;
   padding: 7px;
   font-size: large;
 }
@@ -48,11 +51,13 @@
 #btnHeader:hover {
   background-color: seagreen;
   color: honeydew;
+  border-color: rgb(246, 246, 246);
 }
 
 .btnHeader {
   width: 36em;
   display: flex;
+  border-radius: 6px;
   justify-content: space-evenly;
 }
 
@@ -62,26 +67,32 @@
   align-items: center;
   padding-top: 50px;
   box-sizing: border-box;
+  overflow: hidden;
 }
+
 .profileSec {
   margin-right: 6em;
   border-radius: 50%;
 }
+
 #proCont {
   text-align: center;
   display: inline-flex;
   align-items: center;
 }
+
 #resBtn {
   font-size: large;
   margin: 22px;
   padding: 10px;
   background-color: white;
-  border: 4px groove grey;
+  border: 2px solid grey;
+  border-radius: 5%;
 }
+
 #resBtn:hover {
-  background-color: darkgreen;
-  color: cornsilk;
+  background-color: rgb(199, 224, 224);
+  color: black;
 }
 
 #intro {
@@ -95,24 +106,105 @@
   box-sizing: content-box;
 }
 
-.app-container {
+.app-container0 {
   display: flex;
   min-height: 50vh;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
+}
+
+.app-container {
+  display: flex;
+  min-height: 50vh;
+  margin-left: 19em;
+  flex-direction: column;
+  align-items: end;
+  justify-content: right;
 }
 
 .footer {
-  padding: 23px;
   box-sizing: border-box;
   flex: 0 0 auto;
+  display: flex;
+  flex-direction: row;
   margin-top: auto;
   background-color: rgb(246, 246, 246);
+}
+
+.footbg {
+  background-image: url("./footerBg.png");
+  background-size: cover;
+  opacity: 80%;
 }
 
 .footCont {
   text-decoration: none;
   font-family: "Roboto";
   color: indigo;
+}
+
+.mern,
+.tec,
+.android {
+  padding: 10px;
+}
+
+#mern,
+#tec,
+#android {
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  text-align: justify;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+#andImg,
+#mernImg,
+#tecImg {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.edu {
+  height: auto;
+  width: auto;
+  border: 3px solid grey;
+  margin: 4%;
+  padding: 2%;
+  border-radius: 12px;
+}
+
+
+#headingSkill {
+  display: flex;
+  justify-content: center;
+}
+#skillCont1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.row1 {
+  width: 11rem;
+  margin: 4%;
+  padding: 3%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid grey;
+  border-radius:4%;
+  font-size:100%;
+}
+
+.pro{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 5%;
 }
